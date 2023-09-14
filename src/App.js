@@ -1,70 +1,38 @@
-import "bulma/css/bulma.css";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ProfileCard from "./ProfilCard";
+import NavBar from "./components/NavBar";
+import Image1 from "./image/60352a14bed5c50011a2c0c9.webp";
+import Image2 from "./image/Free-Amigurumi-Crochet-Patterns.jpg";
+import Image3 from "./image/crochet-projects-643822eb921b1.jpg";
 
 function App(){
 
     return (
         <div>
-            <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-    </a>
-
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item">
-        Home
-      </a>
-
-      <a class="navbar-item">
-        Documentation
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
-          </a>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
+          <NavBar/>
+          <div>
+            <section className="hero">
+                <div className="hero-body">
+                    <p className="title has-text-centered">Nuestros Productos</p>
+                </div>
+            </section>
+            <div className="container">
+                <section className="section">
+                    <div className="columns">
+                        <div className="column is-4">
+                            <ProfileCard titulo="Muñecos" arroba="@Muñecos" img={Image1}/>
+                        </div>
+                        <div className="column is-4">
+                            <ProfileCard titulo="Muñecos2" arroba="@Muñecos" img={Image2}/>
+                        </div>
+                        <div className="column is-4">
+                            <ProfileCard titulo="Crochet" arroba="@Crochet" img={Image3}/> 
+                        </div>
+                    </div>
+                </section>
+              </div>
+            </div>
         </div>
-      </div>
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
-        </div>
-    )
+  )
 }
 export default App;
