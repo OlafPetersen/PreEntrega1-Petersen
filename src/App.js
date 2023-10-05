@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar";
 import Image1 from "./image/60352a14bed5c50011a2c0c9.webp";
 import Image2 from "./image/Free-Amigurumi-Crochet-Patterns.jpg";
 import Image3 from "./image/crochet-projects-643822eb921b1.jpg";
-import ItemCount from './components/ItemCount/ItemCount';
+import ItemCount from './components/ItemCount/ItemCount.js';
 
 function App(){
 
@@ -22,9 +22,11 @@ function App(){
                     <div className="columns">
                         <div className="column is-4">
                             <ProfileCard titulo="Muñecos" arroba="@Muñecos" img={Image1}/>
+                            <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada ',quantity)}/>
                         </div>
                         <div className="column is-4">
                             <ProfileCard titulo="Muñecos2" arroba="@Muñecos" img={Image2}/>
+                            <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada ',quantity)}/>
                         </div>
                         <div className="column is-4">
                             <ProfileCard titulo="Crochet" arroba="@Crochet" img={Image3}/> 
